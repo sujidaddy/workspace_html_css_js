@@ -1,0 +1,66 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: aliceblue;
+}
+
+header, main, footer {
+    width: 80%;
+    margin-left: 10%;
+    padding: 20px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    width: 80%;
+    padding: 20px;
+    background-color: brown;
+
+}
+
+section {
+    width : 30%;
+}
+/*
+h2 {
+    color:blue;
+    background-color:aquamarine;
+}
+
+p {
+    color:black;
+}
+
+.s1 {
+    background-color: white;
+}
+
+.s2 {
+    background-color: wheat;
+}
+
+
+#a1 {
+    background-color: beige;
+}
+
+article > p {
+    color:green;
+}
+
+footer {
+    background-color: black;
+}
+
+footer > li {
+    color : white;
+}
+
+footer li {
+    color : white;
+}
+    */
