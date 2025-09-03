@@ -1,0 +1,106 @@
+header, main, footer {
+    background-color: aliceblue;
+    width: 1024px;
+}
+
+body {
+
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;  /* 디스플레이 가로로 할때 필요*/
+    flex-direction: column;  /* 기본이 row */
+    align-items: center; /* flex-direction의 반대축 */
+}
+.title {
+    font-size: 30px;
+    text-align: center;
+    background-color: aliceblue;
+}
+a {
+    /* 크기를 지정해줄수 있도록 변경 */
+    display: inline-block;
+    width: 80px;
+
+    padding: 8px;
+    margin: 5px;
+    /* 테두리 둥글게 */
+    border-radius: 5px;
+
+    text-decoration: none;
+    text-align: center;
+
+    color:white;
+    background-color: rgb(0, 162, 255);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;  /* 디스플레이 가로로 할때 필요*/
+    flex-direction: row;  /* 기본이 row */
+    justify-content: end; /* flex-direction의 중심축 */
+    align-items: end; /* flex-direction의 반대축 */
+
+    height : 50px;
+}
+
+article {
+    padding: 15px;
+}
+
+article > p {
+    width: 974px;
+}
+
+section {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width : 974px;
+}
+
+section > div {
+    display: flex;
+    align-items: center; /* flex-direction의 반대축 */
+}
+
+section > h2 {
+    background-color: white;
+}
+
+div {
+    background-color: white;
+}
+
+img {
+    background-color: white;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+section > div > p {
+    background-color: white;
+    
+}
+
+footer {
+    background-color: black;
+}
+
+footer > ul {
+    list-style: none;
+    background-color: black;
+}
+
+footer  li {
+    background-color: black;
+    color: white;
+}
+
+@media (min-width:1024px) {
+    header, main, footer {
+        width: 1024px;
+    }
+}
