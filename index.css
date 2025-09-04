@@ -1,0 +1,89 @@
+body {
+    /* width : 100vw; */
+    /* height : 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: gainsboro;
+}
+
+header,
+main,
+footer {
+    width: 800px;
+    background-color: white;
+
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+header {
+    background-color: rgb(49, 49, 53);
+    color: aliceblue;
+
+    margin: 25px;
+}
+
+header>h1 {
+    text-align: center;
+}
+
+header span {
+    color: bisque;
+}
+
+ul {
+    list-style-type: none;
+}
+
+footer{
+    padding: 0x 20px;
+}
+
+footer>ul {
+    display: flex;
+    justify-content: end;
+}
+
+footer li {
+    /* margin: 5px 20px 50px 80px; */
+    /* 1개만 입력하면 전체
+    2개를 입력하면 상하, 좌우
+    4개를 입력하면 시계방향으로 상, 우, 하, 좌 */
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer a {
+    display: inline-flex;
+    background-color: rgb(49, 49, 53);
+    color: aliceblue;
+
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+footer a:hover {
+    background-color: brown;
+}
+
+
+main li
+{
+    border-bottom: 1px solid blue;
+
+    padding: 10px;
+    margin-top: 10px;
+}
+
+main li:hover{
+    background-color: aliceblue;
+}
