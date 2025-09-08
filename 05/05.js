@@ -1,87 +1,35 @@
-// 리터럴 표기법
-let arr1 = [1,2,3];
-
-// Array 생성자를 이용
-let arr2 = new Array(1, 2, 3);
-
-// 배열의 크기
-console.log(arr1);
-console.log(`arr1 : [${arr1}]`);
-console.log(`arr1의 요소개수 : ${arr1.length}`);
-
-// 배열 요소 제거
-console.log(arr2);
-arr2.length = 0;
-arr2 = [];
-console.log(arr2);
-
-// 배열요소 추가
-console.log(arr1);
-arr1.push('가');
-console.log(arr1);
-let arr1Pop = arr1.pop();
-console.log(arr1, typeof(arr1));
-console.log(arr1Pop, typeof(arr1Pop));
-
-// 배열의 순회
-for(let i = 0; i < arr1.length; ++i)
+// 로또 번호 생성
+const Lotto = () => 
 {
-    console.log(`arr1[${i}] = ${arr1[i]}`);
+    // 0. 숫자 저장 배열
+    let nums = [];
+    // 1. 숫자 7개 중복되지 않도록 생성
+    while(nums.length < 7)
+    {
+        let n = Math.floor(Math.random() * 45) + 1; // 1~45
+        // 숫자가 배열에 있는지 확인
+        if(nums.includes(n))
+            continue;
+        nums.push(n);
+    }
+
+    // 보너스 배열
+    const bonus = nums.pop();
+    // 숫자 정렬
+    nums.sort((a, b) => a - b);
+    // console.log(nums);
+    // console.log(bonus);
+    
+    // 2. 태그 생성
+    let tags = [];
+    for(let item of nums)
+        tags.push(`<span class='sp${Math.floor(item / 10)}'>${item}</span>`);
+    // + 도 태그 생성
+    tags.push("<span class='spplus'>+</span>");
+    // 보너스 태그 생성
+    tags.push(`<span class='sp${Math.floor(bonus / 10)}'>${bonus}</span>`);
+    // console.log(tags)
+
+    //3. 화면에 보이도록
+    document.getElementById('spDiv').innerHTML = tags.join('');
 }
-
-for(let i in arr1)
-{
-    console.log(`arr1[${i}] = ${arr1[i]}`);
-}
-
-for(let item of arr1)
-{
-    console.log(`item = ${item}`);
-}
-
-arr1.forEach((item, i) => 
-{
-    console.log(`item[${i}] = ${item}`);
-});
-
-// 배열 map 메소드
-const arr3 = arr1.map((item) =>
-{
-    return item * 2;
-});
-console.log(arr3);
-
-// map은 항상 return값이 필요
-// 콜백함수는 파라메터가 1개 일때는 파라메터의 () 생략가능
-// 함수내에  return 문만 있으면 함수의 {}와 return 생략 가능
-const arr4 = arr1.map(item => item * 2);
-console.log(arr4);
-
-// 콜백함수는 파라메터가 2개가 되면 인덱스를 가져옴
-const arr5 = arr1.map((item, i) => item * i);
-console.log(arr5);
-
-// filter
-//const arr6 = arr1.filter(item => item % 2 == 0);
-const arr6 = arr1.filter((item) => 
-{
-    return item % 2 == 0;
-})
-console.log(arr6);
-
-// map함수 구성
-let arr7 = [];
-for(let c of arr1)
-{
-    arr7.push(c*2);
-}
-console.log(arr7);
-
-// filer함수 구성
-let arr8 = [];
-for(let c of arr1)
-{
-    if(c % 2 == 0)
-        arr8.push(c);
-}
-console.log(arr8);

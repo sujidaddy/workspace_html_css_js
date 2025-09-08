@@ -1,0 +1,60 @@
+#titleDiv {
+    width : 80%;
+    height : 80px;
+    
+    font-size: 40px;
+    border: 1px dotted rgb(54, 54, 54);
+    background-color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#gameDiv {
+    width : 80%;
+    border: 1px dotted rgb(54, 54, 54);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#diceDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    margin: 5px;
+}
+
+span {
+    margin: 8px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.diceClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 8px;
+}
+
+#msg {
+    font-size: 40px;
+    border: 1px dotted rgb(54, 54, 54);
+}
+
+.spx {
+    color: red;
+}
+
+.spo {
+    color: blue;
+}
