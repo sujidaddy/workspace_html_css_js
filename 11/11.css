@@ -1,0 +1,62 @@
+#titleDiv {
+    width : 80%;
+    height : 80px;
+    
+    font-size: 35px;
+    border: 1px dotted rgb(54, 54, 54);
+    background-color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#gameDiv {
+    width : 80%;
+    height : 300px;
+    /*border: 1px dotted rgb(54, 54, 54);*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    width : 80%;
+    padding: 20px;
+    border: 1px solid gainsboro;
+}
+
+form > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn_select {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 1px;
+    font-size: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_select:hover {
+    cursor: pointer;
+
+    border: 2px solid blue;
+}
