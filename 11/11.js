@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let timerId;
     let showtime = 1000;
-    function showMessage(str, time) {
+    const showMessage = (str, time) => {
         clearTimeout(timerId);
         document.getElementById("msg").innerHTML = str;
         if (time > 0)
             timerId = setTimeout(showMessage, time, "");
     }
 
-    function clearBtn(str) {
+    const clearBtn = (str) => {
         for (let i = 0; i < btn_selects.length; ++i)
         {
             if(str == "-1")
@@ -51,15 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             idx = parseInt(col.getAttribute('id').replace('col', ''));
-            if(count == btn_selects.length - 1)
-            {
-                col.innerHTML = '💖';
-                showMessage('<span>폭탄</span>을 모두 찾으셨습니다.', 0);
-                flag = false;
-                btn_shuffle.innerHTML = '폭탄섞기';
-                clearTimeout(timerId);
-            }
-            else if(arrnum[idx] == 1)
+            
+            if(arrnum[idx] == 1)
             {
                 col.innerHTML = '💥';
                 showMessage('<span>폭탄</span>입니다.<br><span>게임종료</span>', 0);
@@ -73,6 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     col.innerHTML = '💖';
                     showMessage('<span>폭탄</span>이 아닙니다.', showtime);
                     ++count;
+                    if(count == btn_selects.length - 1)
+                    {
+                        btn_selects[arrnum.indexOf(1)].innerHTML = '💖';
+                        showMessage('<span>폭탄</span>을 모두 찾으셨습니다.', 0);
+                        flag = false;
+                        btn_shuffle.innerHTML = '폭탄섞기';
+                        clearTimeout(timerId);
+                    }
                 }
             }
         });
