@@ -5,6 +5,14 @@
     align-items: center;
 }
 
+#boxMain > div{
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 #txt1 {
     padding: 5px;
     font-size: larger;
@@ -25,16 +33,17 @@ form{
 }
 
 #content {
-    width: 90%;
+    width: 600px;
+    height: 500px;
     display: flex;
     justify-content: start;
     align-items: start;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 .img {
-    width:150px;
-    padding: 3px;
-    margin: 3px;
+    width:140px;
+    padding: 2px;
+    margin: 2px;
 }
 #btBefore, #btAfter {
     width:50px;
