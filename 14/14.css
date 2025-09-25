@@ -1,0 +1,41 @@
+#boxMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#txt1 {
+    padding: 5px;
+    font-size: larger;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 100%;
+    padding: 5px;
+}
+
+#btOk, #btCancel {
+    width: 20%;
+    margin-right: 5px;
+}
+
+#content {
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+}
+.img {
+    width:150px;
+    padding: 3px;
+    margin: 3px;
+}
+#btBefore, #btAfter {
+    width:50px;
+}
